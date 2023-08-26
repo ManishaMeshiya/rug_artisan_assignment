@@ -63,7 +63,7 @@ class UserController extends Controller
     {
         try
         {
-            $input = $request->all();
+            $input = $request->post();
             $rule =  [
                 'username' => 'required',
                 'password' => 'required',

@@ -24,7 +24,7 @@ Route::group(['middleware'=>['XSS','throttle:api'],'prefix'=>'v1'],function(){
         Route::post('user/signup',[UserController::class,'signup']);
         Route::post('user/login',[UserController::class,'login']);
         Auth::routes();
-        Route::post('user/logout',[UserController::class,'logout']);
+        Route::get('user/logout',[UserController::class,'logout']);
         Route::get('user/transaction-list',[UserTransactionController::class,'index']);
         Route::post('user/create-transaction',[UserTransactionController::class,'store']);
         Route::put('user/update-transaction/{id}',[UserTransactionController::class,'update']);
